@@ -1,0 +1,458 @@
+.fredericka-the-great-regular {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Fredericka the Great", serif;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --backgroud-color: #000000;
+    --text-color: #999;
+    --title-color: #fff;
+}
+
+.dark-mode {
+    --backgroud-color: #e5e5e5;
+    --text-color: #000;
+    --title-color: #000;
+}
+
+body {
+    background-color: var(--backgroud-color);
+    color: var(--text-color);
+}
+
+/* ----------------------------------------- */
+
+/* En tête de page */
+header {
+    padding: 10px 30px;
+    background-color: var(--backgroud-color);
+    position: fixed; /* Garde le header fixé en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Assure que le header sera au-dessus du canvas */
+}
+
+/* Navigation et autres éléments du header */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+.logo img {
+    width: 40px;
+    top: 10px;
+}
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin: 5px 15px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ---------------------------------------- */
+
+
+/* ---------------------------------------- */
+/* Bouton mode dark */
+.bouton-dark#dark-theme-toggle {
+    background-color: #ff4848;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.bouton-dark a#dark{
+    color: #fff;
+
+}
+.bouton-dark img {
+    width: 35px;
+    margin-left: 10px;
+}
+
+/* ---------------------------------------- */
+
+
+
+/* ----------------------------------------- */
+/* cercle infini planete */
+.boite {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: 100px;
+    left: -300px;
+    z-index: -1;
+    -background: #cccccc;
+    overflow: hidden;
+}
+
+.cercle {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    border-radius: 50%;
+    animation: animCercle 20s linear infinite;
+    scale: 0.95;
+}
+
+@keyframes animCercle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.cercle>.cercle {
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+}
+
+.cercle .atome {
+    position: absolute;
+    left: calc(50% - 13px);
+    top: -13px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgb(calc(25* var(--nume)), 73, 73);
+}
+
+.a1 {
+    --nume: 1;
+}
+
+.a2 {
+    --nume: 2;
+}
+
+.a3 {
+    --nume: 3;
+}
+
+.a4 {
+    --nume: 4;
+}
+
+.a5 {
+    --nume: 5;
+}
+
+.a6 {
+    --nume: 6;
+}
+
+.a7 {
+    --nume: 7;
+}
+
+.a8 {
+    --nume: 8;
+}
+
+.a9 {
+    --nume: 9;
+}
+
+.a10 {
+    --nume: 10;
+}
+
+/* ------------------------------------------- */
+
+
+
+
+
+/* Présentation Contact et CV et
+   Police appliquer au texte */
+/* --------------------------------------- */
+.presentation {
+ 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 150px;
+    margin-top: 150px;
+    z-index: 1; /* Place la section de présentation au-dessus du canvas */
+}
+
+.section {
+    position: relative;
+    justify-content: end;
+    text-align: center;
+    align-items: center;
+    
+    padding-top: 30px;
+    z-index: 1; /* Assurez-vous que cette section est au-dessus du canvas */
+}
+
+#canvas {
+    position: fixed; /* Fixe le canvas pour qu'il ne bouge pas pendant le défilement */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Prend toute la largeur de la fenêtre */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    z-index: -1; /* Positionne le canvas derrière le contenu */
+}
+
+.presentation h2 {
+    font-size: 70px;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.presentation .p {
+    font-size: 20px;
+}
+
+.presentation a {
+    background: #ff4848;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 35px;
+    text-decoration: none;
+    display: none;
+    display: inline-block;
+}
+
+.presentation p {
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+/* .................... */
+
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+  }
+  
+  .title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+  }
+  
+  .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  }
+  
+  .title-word-4 {
+    --color-1: #17494D;
+    --color-2: #DF8453;
+    --color-3: #3D8DAE;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .container {
+    display: grid;
+    place-items: center;  
+    text-align: center;
+    height: 100vh
+  }
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8.5vw;
+    text-transform: uppercase;
+  }
+
+  /* Ajoutons un style pour la div "boite" et le canvas */
+.boite {
+    display: block;  /* Par défaut, la boîte est visible */
+}
+
+#canvas {
+    display: block;  /* Par défaut, le canvas est visible */
+}
+
+.dark-mode .boite {
+    display: block;  /* Afficher la boîte en mode sombre */
+}
+
+.dark-mode #canvas {
+    display: none;  /* Cacher le canvas en mode sombre */
+}
+
+body:not(.dark-mode) .boite {
+    display: none;  /* Cacher la boîte en mode clair */
+}
+
+body:not(.dark-mode) #canvas {
+    display: block;  /* Afficher le canvas en mode clair */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style de l'image du logo par défaut (avant ouverture du menu) */
+.logo img {
+    display: block;
+    width: 100%; /* Ajuste la taille de l'image */
+    height: auto;
+}
+/* Style de base du logo */
+.logo img {
+    width: 40px;
+    transition: opacity 0.3s ease;
+}
+.logo {
+    position: absolute;
+    top: 10px; /* Ajustez la distance depuis le haut si nécessaire */
+    left: 50%;
+    transform: translateX(-50%); /* Cette propriété déplace le logo pour le centrer horizontalement */
+    z-index: 10; /* S'assurer que le logo est au-dessus des autres éléments */
+}
+
+.logo.open img {
+    display: none; /* Cache l'image du logo lorsque le menu est ouvert */
+}
+
+
+/* Menu caché par défaut */
+.menu {
+    display: none; /* Le menu est caché au départ */ 
+    width: 100%;  /* Définissez la largeur du menu */
+    background-color: var(--backgroud-color);
+    border-radius: 10px;
+    z-index: 9;
+}
+
+/* Lorsque le menu est ouvert */
+.menu.open {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Style des éléments de menu */
+.menu li {
+    list-style: none;
+    text-align: center;  /* Centrer le texte à l'intérieur des éléments */
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+      /* Prend toute la largeur du menu */
+}
+
+/* Style des liens */
+.menu li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Lorsque le menu est ouvert, le logo devient un X */
+.logo.open:before {
+   
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    top: 15px;  /* Ajuste la position du X */
+    right: 10px;  /* Place le X à droite de l'écran */
+    cursor: pointer;  /* Change le curseur sur le X pour indiquer qu'il est cliquable */
+}
+
+
+/* #dark-theme-toggle {
+    display: flex;
+    cursor: pointer;
+    color: var(--text-color);
+} */
+
+/* Image du mode sombre dans le menu */
+/* #dark-theme-toggle img {
+    width: 20px;
+    
+} */
+
+
+/* Style de la div "close-btn" (X) */
+.close-btn {
+    position: absolute;
+    top: 12px;  /* Distance depuis le haut */
+    right: 10px;  /* Distance depuis la droite */
+    font-size: 40px;  /* Taille du X */
+    color: #fff;  /* Couleur du X */
+    cursor: pointer;  /* Change le curseur pour indiquer que c'est cliquable */
+    display: none;  /* Cacher le X par défaut */
+    z-index: 11;
+      /* S'assurer que le X est au-dessus du menu */
+}
+
+/* Quand le menu est ouvert, afficher le X */
+.menu.open + .close-btn {
+    display: block; 
+    color: rgba(255, 72, 72); /* Affiche le X uniquement quand le menu est ouvert */
+}
+
+#contact-links {
+    display: inline-block; /* Liens visibles en mode clair */
+}
+
+/* Lorsque la page est en mode sombre, on masque les liens */
+body.dark-mode #contact-links {
+    display: none; /* Liens cachés en mode sombre */
+}

@@ -1,0 +1,385 @@
+.fredericka-the-great-regular {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Fredericka the Great", serif;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --backgroud-color: #000000;
+    --text-color: #999;
+    --title-color: #fff;
+}
+
+.dark-mode {
+    --backgroud-color: #e5e5e5;
+    --text-color: #000;
+    --title-color: #000;
+}
+
+body {
+    background-color: var(--backgroud-color);
+    color: var(--text-color);
+}
+
+/* ----------------------------------------- */
+
+/* En tête de page */
+header {
+    padding: 10px 50px;
+    background-color: var(--backgroud-color);
+    position: fixed; /* Garde le header fixé en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Assure que le header sera au-dessus du canvas */
+}
+
+/* Navigation et autres éléments du header */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+.logo img {
+    width: 40px;
+    top: 10px;
+}
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin: 5px 15px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ---------------------------------------- */
+
+
+/* ---------------------------------------- */
+/* Bouton mode dark */
+.bouton-dark {
+    background-color: #ff4848;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.bouton-dark img {
+    width: 35px;
+    margin-left: 10px;
+}
+
+
+/* Présentation Contact et CV et
+   Police appliquer au texte */
+/* --------------------------------------- */
+.presentation {
+    position: absolute;
+    left: -100px;
+    text-align: center; /* Nécessaire pour que les éléments à l'intérieur se superposent correctement */
+    display: flex;
+    flex-direction: column;
+    padding: 25px 150px;
+    margin-top: 150px;
+
+    z-index: 1; /* Place la section de présentation au-dessus du canvas */
+}
+
+.section {
+    position: relative;
+    justify-content: end;
+    text-align: center;
+    align-items: center;
+    margin-left: 300px;
+    padding-top: 30px;
+    z-index: 1; /* Assurez-vous que cette section est au-dessus du canvas */
+}
+
+#canvas {
+    position: fixed; /* Fixe le canvas pour qu'il ne bouge pas pendant le défilement */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Prend toute la largeur de la fenêtre */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    z-index: -1; /* Positionne le canvas derrière le contenu */
+}
+
+.presentation h2 {
+    font-size: 70px;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.presentation .p {
+    font-size: 20px;
+}
+
+.presentation a {
+    background: #ff4848;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 35px;
+    text-decoration: none;
+    display: none;
+    display: inline-block;
+}
+
+.presentation p {
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+
+/* Styles pour le mode sombre */
+.dark-mode .presentation {
+    position: absolute;
+    left: -20px;
+    text-align: center; /* Nécessaire pour que les éléments à l'intérieur se superposent correctement */
+    display: flex;
+    flex-direction: column;
+    padding: 25px 150px;
+    margin-top: 150px;
+
+    z-index: 1;/* Réduire l'espace au-dessus */
+}
+
+.dark-mode .presentation h2 {
+    font-size: 80px;
+    color: var(--title-color);
+    font-weight: 600; /* Réduire la taille du texte en mode sombre */
+}
+
+.dark-mode .presentation p {
+    font-size: 20px; /* Réduire la taille du texte en mode sombre */
+    
+}
+/* .................... */
+
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+  }
+  
+  .title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+  }
+  
+  .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  }
+  
+  .title-word-4 {
+    --color-1: #17494D;
+    --color-2: #DF8453;
+    --color-3: #3D8DAE;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .container {
+    display: grid;
+    place-items: center;  
+    text-align: center;
+    height: 100vh
+  }
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8.5vw;
+    text-transform: uppercase;
+  }
+
+  /* animation etoile */
+/* ---------------------------------------- */
+.chargement {
+    position: absolute;
+    left: 600px;
+    top: 400px;
+    animation: animateColor 7.2s linear infinite;
+}
+
+@keyframes animateColor {
+
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.chargement span {
+    position: absolute;
+    transform-origin: 250px;
+    transform: translateX(250px) rotate(calc(var(--i) *30deg));
+    filter: drop-shadow(0 0 5px #3cc2ff) drop-shadow(0 0 15px #3cc2ff) drop-shadow(0 0 30px #3cc2ff);
+}
+
+.chargement span i {
+    position: relative;
+    color: #3cc2ff;
+    animation: rotate-stars 3s linear infinite;
+    animation-delay: calc(var(--i) * -0.2s);
+}
+
+@keyframes rotate-stars {
+
+    0% {
+        transform: rotate(0deg) scale(0);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(4);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+
+}
+
+.chargement span::before {
+
+    content: '\f005';
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 1.75em;
+    color: black;
+    animation: rotate-particle 2.5s linear infinite;
+    animation-delay: calc(var(--i) * -0.2s);
+}
+
+@keyframes rotate-particle {
+
+    0% {
+        scale: 1;
+        opacity: 0;
+        rotate: 180deg;
+    }
+
+    50% {
+        scale: 1;
+        opacity: 1;
+        rotate: 180deg;
+    }
+
+    100% {
+        scale: 0;
+        opacity: 0;
+        rotate: 360deg;
+        filter: drop-shadow(-150px 0 #3cc2ff) drop-shadow(150px 0 #3cc2ff) drop-shadow(0 150px #3cc2ff) drop-shadow(0 -150px #3cc2ff);
+    }
+}
+
+.trans{
+    display: flex;
+    gap: 170px;
+    margin-top: 400px;
+    margin-bottom: 100px;
+    
+
+}
+.transition {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.transition1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.element {
+    display: inline-block;
+    background: linear-gradient(180deg, #ff8a00, #e52e71);
+    height: 130px;
+    width: 130px;
+    font-size: 1px;
+    padding: 1px;
+    color: white;
+    margin-right: 20px;
+    margin-left: 20px;
+    animation: skew 3s infinite;
+    transform: skew(20deg);
+    animation-direction: alternate;
+    opacity: .7;
+   
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(20deg, 20deg);
+    }
+
+    100% {
+        transform: skew(-20deg, -20deg);
+    }
+}
+
+.chargement {
+    display: block;  /* Par défaut, la boîte est visible */
+}
+
+#canvas {
+    display: block;  /* Par défaut, le canvas est visible */
+}
+
+.dark-mode .chargement {
+    display: block;  /* Afficher la boîte en mode sombre */
+}
+
+.dark-mode #canvas {
+    display: none;  /* Cacher le canvas en mode sombre */
+}
+
+body:not(.dark-mode) .chargement {
+    display: none;  /* Cacher la boîte en mode clair */
+}
+
+body:not(.dark-mode) #canvas {
+    display: block;  /* Afficher le canvas en mode clair */
+}

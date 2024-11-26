@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.BarreHaut{
+    width: 100%;
+    height: 100%;
+}
+
+.BarreHaut video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.BarreMillieu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    top: 60vh;
+    transform: translateY(-50%);
+
+}
+
+.BarreMillieu h1{
+    font-size: 4em;
+    color: #ffffff;
+}
+.BarreMillieu span{
+    color: #e8c500;
+}
+.BarreMillieu a{
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1em;
+    margin-top: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+}
+
+.BarreMillieu a:hover{
+    color: #000;
+    background-color: #e8c500;
+    border: 2px solid #000;
+}

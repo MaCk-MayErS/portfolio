@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acceuil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Taprom&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Acceuil.css">
+    <link rel="icon" href="../photo/bylogo.png">
+    <script src="../js/Darkmenu.js" defer></script>
+    <script src="../js/canvas.js" defer></script>
+    <script src="../js/burger.js" defer></script>
+</head>
+
+<body>
+    <!-- Canevas en bas de la page pour l'animation -->
+    <canvas id="canvas"></canvas>
+
+    <header>
+        <nav>
+            <a href="#" class="logo" id="logo">
+                <img src="../photo/bylogo.png" alt="Logo" id="logo-img">
+            </a>
+    
+            <!-- Menu burger (initialement visible sur petits écrans) -->
+            <div class="burger" id="burger"></div>
+    
+            <!-- Menu caché par défaut -->
+            <ul id="menu" class="menu">
+                <li><a href="../Intro.html">Intro</a></li>
+                <li><a href="../acceuil/Acceuil.html">Acceuil</a></li>
+                <li><a href="../présentation/presentation.html">Présentation</a></li>
+                <li><a href="../compétence/">Compétence</a></li>
+                <li><a href="#">Expérience</a></li>
+                <li class="bouton-dark" id="dark-theme-toggle">
+                    <a href="#" id="dark">Mode</a>
+                    <img src="../photo/mode.png" alt="Mode" />
+                </li>
+            </ul>
+    
+            <!-- Div pour le X à droite de l'écran -->
+            <div class="close-btn" id="close-btn">X</div>
+        </nav>
+    </header>
+    
+    
+    
+
+    <main>
+        <div class="boite">
+            <div class="cercle c1">
+                <div class="atome a1"></div>
+                <div class="cercle c2">
+                    <div class="atome a2"></div>
+                    <div class="cercle c3">
+                        <div class="atome a3"></div>
+                        <div class="cercle c4">
+                            <div class="atome a4"></div>
+                            <div class="cercle c5">
+                                <div class="atome a5"></div>
+                                <div class="cercle c6">
+                                    <div class="atome a6"></div>
+                                    <div class="cercle c7">
+                                        <div class="atome a7"></div>
+                                        <div class="cercle c8">
+                                            <div class="atome a8"></div>
+                                            <div class="cercle c9">
+                                                <div class="atome a9"></div>
+                                                <div class="cercle c10">
+                                                    <div class="atome a10"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="presentation">
+            <section class="section">
+                <h2 class="title">
+                    <span class="title-word title-word-1">Bonjour</span>
+                    <span class="title-word title-word-2">Je</span>
+                    <span class="title-word title-word-3">Suis</span>
+                    <br>
+                    <span class="title-word title-word-4">Yohan</span>
+                    <span class="title-word title-word-4">Barbary</span>
+                </h2>
+
+                <p>
+                    Découvrez mon portfolio en ligne, un CV interactif qui présente mes compétences, réalisations et
+                    projets à travers une expérience immersive et dynamique. <strong>Plongez dans mon univers
+                        professionnel et explorez mon parcours à votre rythme !</strong>
+                </p>
+
+                <p>
+                    Si vous souhaitez <strong>mon CV</strong> ou me <strong>contacter</strong>, vous trouverez en bas de
+                    l'accueil deux liens à cet effet. 
+                </p>
+                <p>
+
+                    Des <strong>menus </strong>et des <strong>options cachées</strong> ont été placés </strong>volontairement<strong> dans ce portfolio. Ces éléments vous permettront de découvrir certains <strong>projets réalisés</strong> en développement, ainsi que de mettre en <strong>valeur</strong> la maîtrise des langages acquis durant ma formation.
+
+                </p>
+                <p>
+
+Pour vous <strong>guider</strong>, je vous invite à tester <strong>par vous-même</strong> et à découvrir ce que ces éléments peuvent vraiment offrir. Le logo pourrait bien <strong>dissimuler une fonction spéciale</strong>, et le changement de mode de couleur pourrait entraîner des <strong>effets inattendus</strong>. Peut-être que l'interaction avec le mode de couleur <strong>modifiera</strong> plus que l'apparence de la page… C'est à <strong>vous de le découvrir !</strong>
+                </p>
+
+                <a href="mailto:barbary.yohan@gmail.com" target="_blank" id="contact-links">Me Contacter</a>
+<a href="../doc/CV.pdf" target="_blank" download id="contact-links">Télécharger mon CV</a>
+</section>
+        </div>
+    </main>
+</body>

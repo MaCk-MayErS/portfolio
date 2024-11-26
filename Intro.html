@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Intro.css">
+    <link rel="icon" href="../portefolio/photo/bylogo.png">
+    <title>Video d'intro</title>
+</head>
+<body>
+
+
+    <div class="BarreHaut">
+  
+  
+      <video autoplay loop muted plays-inline class="video">
+            <source src="./video/loot.mp4" type="video/mp4">
+        </video>
+
+  
+  
+      <br>
+      
+      <div class="BarreMillieu">
+      
+        <h1>Je suis : 
+          <br>
+           <span class="animation"></span>
+        </h1>
+      
+        <a href="./acceuil/Acceuil.html">Bienvenue sur mon PorteFolio</a>
+      
+      
+      </div>
+    </div>
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.animation', {
+        strings: ['Developer.', 'Gamer.', 'Designer.', 'Guitariste.', 'Yohan Barbary.'],
+        loop: true,
+        typeSpeed: 110,
+        backSpeed: 20,
+    });
+
+    </script>
+
+</body>
+</html>
