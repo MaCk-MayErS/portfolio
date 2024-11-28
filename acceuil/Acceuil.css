@@ -3,74 +3,69 @@
     font-weight: 400;
     font-style: normal;
 }
-
 * {
     margin: 0;
     padding: 0;
     font-family: "Fredericka the Great", serif;
     box-sizing: border-box;
 }
-
 :root {
 
     --backgroud-color: #000000;
     --text-color: #999;
     --title-color: #fff;
 }
-
 .dark-mode {
     --backgroud-color: #e5e5e5;
     --text-color: #000;
     --title-color: #000;
 }
-
 body {
     background-color: var(--backgroud-color);
     color: var(--text-color);
 }
-
-/* ----------------------------------------- */
-
-/* En tête de page */
 header {
     padding: 10px 30px;
     background-color: var(--backgroud-color);
-    position: fixed; /* Garde le header fixé en haut de la page */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; /* Assure que le header sera au-dessus du canvas */
+    z-index: 10; 
 }
-
-/* Navigation et autres éléments du header */
 nav {
     display: flex;
     justify-content: space-between;
 }
-.logo img {
-    width: 40px;
-    top: 10px;
+.image-container {
+    width: 100vw;  
+    height: 12vh; 
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    top: 0px; 
+    left: 0;
+    z-index: 1; 
+}
+#logo-img {
+    width: 100%;
+    height: 90px;
+    background-color: #000;
 }
 nav ul {
     list-style: none;
 }
-
 nav ul li {
     display: inline-flex;
     margin: 5px 15px;
 }
-
 nav ul li a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
 }
-
-/* ---------------------------------------- */
-
-
-/* ---------------------------------------- */
-/* Bouton mode dark */
 .bouton-dark#dark-theme-toggle {
     background-color: #ff4848;
     color: #fff;
@@ -84,19 +79,11 @@ nav ul li a {
 }
 .bouton-dark a#dark{
     color: #fff;
-
 }
 .bouton-dark img {
     width: 35px;
     margin-left: 10px;
 }
-
-/* ---------------------------------------- */
-
-
-
-/* ----------------------------------------- */
-/* cercle infini planete */
 .boite {
     position: absolute;
     width: 700px;
@@ -107,7 +94,6 @@ nav ul li a {
     -background: #cccccc;
     overflow: hidden;
 }
-
 .cercle {
     position: absolute;
     box-sizing: border-box;
@@ -118,7 +104,6 @@ nav ul li a {
     animation: animCercle 20s linear infinite;
     scale: 0.95;
 }
-
 @keyframes animCercle {
     0% {
         transform: rotate(0deg);
@@ -128,7 +113,6 @@ nav ul li a {
         transform: rotate(360deg);
     }
 }
-
 .cercle>.cercle {
     position: absolute;
     left: 35px;
@@ -136,7 +120,6 @@ nav ul li a {
     width: calc(100% - 50px);
     height: calc(100% - 50px);
 }
-
 .cercle .atome {
     position: absolute;
     left: calc(50% - 13px);
@@ -146,7 +129,6 @@ nav ul li a {
     border-radius: 50%;
     background: rgb(calc(25* var(--nume)), 73, 73);
 }
-
 .a1 {
     --nume: 1;
 }
@@ -186,16 +168,6 @@ nav ul li a {
 .a10 {
     --nume: 10;
 }
-
-/* ------------------------------------------- */
-
-
-
-
-
-/* Présentation Contact et CV et
-   Police appliquer au texte */
-/* --------------------------------------- */
 .presentation {
  
     display: flex;
@@ -203,9 +175,8 @@ nav ul li a {
     flex-direction: column;
     padding: 25px 150px;
     margin-top: 150px;
-    z-index: 1; /* Place la section de présentation au-dessus du canvas */
+    z-index: 1; 
 }
-
 .section {
     position: relative;
     justify-content: end;
@@ -213,28 +184,24 @@ nav ul li a {
     align-items: center;
     
     padding-top: 30px;
-    z-index: 1; /* Assurez-vous que cette section est au-dessus du canvas */
+    z-index: 1; 
 }
-
 #canvas {
-    position: fixed; /* Fixe le canvas pour qu'il ne bouge pas pendant le défilement */
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100vw; /* Prend toute la largeur de la fenêtre */
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    z-index: -1; /* Positionne le canvas derrière le contenu */
+    width: 100vw;
+    height: 100vh; 
+    z-index: -1;
 }
-
 .presentation h2 {
     font-size: 70px;
     color: var(--title-color);
     font-weight: 600;
 }
-
 .presentation .p {
     font-size: 20px;
 }
-
 .presentation a {
     background: #ff4848;
     color: #fff;
@@ -246,42 +213,33 @@ nav ul li a {
     display: none;
     display: inline-block;
 }
-
 .presentation p {
     font-size: 25px;
     margin-top: 25px;
 }
-
-/* .................... */
-
 .title-word {
     animation: color-animation 4s linear infinite;
   }
-  
   .title-word-1 {
     --color-1: #DF8453;
     --color-2: #3D8DAE;
     --color-3: #E4A9A8;
-  }
-  
+  }  
   .title-word-2 {
     --color-1: #DBAD4A;
     --color-2: #ACCFCB;
     --color-3: #17494D;
-  }
-  
+  } 
   .title-word-3 {
     --color-1: #ACCFCB;
     --color-2: #E4A9A8;
     --color-3: #ACCFCB;
-  }
-  
+  } 
   .title-word-4 {
     --color-1: #17494D;
     --color-2: #DF8453;
     --color-3: #3D8DAE;
-  }
-  
+  } 
   @keyframes color-animation {
     0%    {color: var(--color-1)}
     32%   {color: var(--color-1)}
@@ -291,46 +249,39 @@ nav ul li a {
     99%   {color: var(--color-3)}
     100%  {color: var(--color-1)}
   }
-  
-  /* Here are just some visual styles. 🖌 */
-  
   .container {
     display: grid;
     place-items: center;  
     text-align: center;
     height: 100vh
   }
-  
   .title {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
     font-size: 8.5vw;
     text-transform: uppercase;
   }
-
-  /* Ajoutons un style pour la div "boite" et le canvas */
 .boite {
-    display: block;  /* Par défaut, la boîte est visible */
+    display: block;
 }
 
 #canvas {
-    display: block;  /* Par défaut, le canvas est visible */
+    display: block;
 }
 
 .dark-mode .boite {
-    display: block;  /* Afficher la boîte en mode sombre */
+    display: block; 
 }
 
 .dark-mode #canvas {
-    display: none;  /* Cacher le canvas en mode sombre */
+    display: none; 
 }
-
 body:not(.dark-mode) .boite {
-    display: none;  /* Cacher la boîte en mode clair */
+    display: none; 
 }
 
 body:not(.dark-mode) #canvas {
-    display: block;  /* Afficher le canvas en mode clair */
+    display: block; 
 }
 
 
