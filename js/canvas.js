@@ -76,9 +76,7 @@ class Particle {
     if (this.position.x > excludedArea.x && this.position.x < excludedArea.x + excludedArea.width &&
         this.position.y > excludedArea.y && this.position.y < excludedArea.y + excludedArea.height) {
       // Déplacez la particule hors de la zone de texte (exemple : en haut)
-      if (this.position.y < excludedArea.y + excludedArea.height) {
-        this.position.y -= 10; // Déplace la particule en dehors de la zone
-      }
+      
     }
 
     // Mettre à jour la position de la particule en dehors de la zone

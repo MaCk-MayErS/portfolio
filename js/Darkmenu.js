@@ -1,12 +1,12 @@
 const boutonDark = document.getElementById('dark');
 const presentation = document.querySelector('.presentation');
-const section = document.querySelector('.section')
+const section = document.querySelector('.section');
 const presentationTitle = presentation.querySelector('h2');
 const presentationText = presentation.querySelectorAll('p');
 const darkButton = document.getElementById('dark-theme-toggle');
-const imageCont = document.querySelector(".image-container")
-const BgLogo = document.getElementById('logo-img')
-
+const imageCont = document.querySelector(".image-container");
+const BgLogo = document.getElementById('logo-img');
+const imageConst = imageCont; 
 
 boutonDark.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
@@ -15,7 +15,6 @@ boutonDark.addEventListener('click', () => {
     toggleTextContent();  
 });
 
-
 const updateCanvasVisibility = () => {
     if (document.body.classList.contains('dark-mode')) {
         document.getElementById('canvas').style.display = 'none';
@@ -23,7 +22,6 @@ const updateCanvasVisibility = () => {
         document.getElementById('canvas').style.display = 'block';
     }
 };
-
 
 const updateTextStyle = () => {
     if (document.body.classList.contains('dark-mode')) {
@@ -36,7 +34,6 @@ const updateTextStyle = () => {
         imageCont.style.backgroundColor = '#e5e5e5';
         presentationTitle.style.color = '#fff';     
     } 
-
     else {
         presentation.style.textAlign = 'center';
         presentationTitle.style.fontSize = '70px';  
@@ -44,11 +41,10 @@ const updateTextStyle = () => {
         presentationText.forEach(p => p.style.marginTop = '20px');
         section.style.marginLeft = "";
         presentationTitle.style.color = '#000';
-        imageCont.style.backgroundColor = '#000';
+        imageCont.style.backgroundColor = 'transparent';
         BgLogo.style.backgroundColor = "#000"
     }
 }
-
 
 const toggleTextContent = () => {
     if (document.body.classList.contains('dark-mode')) {
@@ -66,10 +62,8 @@ const toggleTextContent = () => {
             et de découvrir <strong>des projets</strong> en version courte que <strong>j'ai réalisés en développement.</strong>, Je vous souhaite encore une fois une <strong>bonne visite.</strong>.
         `;
         presentationText[2].innerHTML = ``;
-
         presentationText[3].innerHTML = ``;
     } 
-
     else {
         presentationTitle.innerHTML = `
             <span class="title-word title-word-1">Bonjour</span>
@@ -89,8 +83,20 @@ const toggleTextContent = () => {
            Des <strong>menus </strong>et des <strong>options cachées</strong> ont été placés </strong>volontairement<strong> dans ce portfolio. Ces éléments vous permettront de découvrir certains <strong>projets réalisés</strong> en développement, ainsi que de mettre en <strong>valeur</strong> la maîtrise des langages acquis durant ma formation.`;
         presentationText[3].innerHTML = `
            Pour vous <strong>guider</strong>, je vous invite à tester <strong>par vous-même</strong> et à découvrir ce que ces éléments peuvent vraiment offrir. Le logo pourrait bien <strong>dissimuler une fonction spéciale</strong>, et le changement de mode de couleur pourrait entraîner des <strong>effets inattendus</strong>. Peut-être que l'interaction avec le mode de couleur <strong>modifiera</strong> plus que l'apparence de la page… C'est à <strong>vous de le découvrir !</strong>
-                `;             
-    }}
+        `;             
+    }
+};
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    const scrollFactor = Math.min(scrollPosition / 500, 1); 
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    const bgColor = isDarkMode ? '#000' : '#fff'; 
+    const logoBgColor = isDarkMode ? '#e5e5e5' : '#000'; 
+    imageCont.style.backgroundColor = `rgba(${parseInt(bgColor.slice(1, 3), 16)}, ${parseInt(bgColor.slice(3, 5), 16)}, ${parseInt(bgColor.slice(5, 7), 16)}, ${scrollFactor})`; 
+    BgLogo.style.backgroundColor = `rgba(${parseInt(logoBgColor.slice(1, 3), 16)}, ${parseInt(logoBgColor.slice(3, 5), 16)}, ${parseInt(logoBgColor.slice(5, 7), 16)}, ${scrollFactor})`; 
+    presentationTitle.style.color = `rgba(255, 255, 255, ${scrollFactor})`;
+});
 
 updateCanvasVisibility();
 updateTextStyle();

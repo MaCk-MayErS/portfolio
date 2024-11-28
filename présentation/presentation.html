@@ -1,98 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>acceuil</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Taprom&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Presentation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Taprom&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./presentation.css">
     <link rel="icon" href="../photo/bylogo.png">
-    <script src="../js/Darkmenu.js" defer></script>
+    <script src="../js/Minijeux.js" defer></script>
     <script src="../js/canvas.js" defer></script>
-
+    <script src="../js/burger.js" defer></script>
+    <script src="../js/JustePrix.js" defer></script>
 </head>
+
 <body>
 
     <canvas id="canvas"></canvas>
-    
     <header>
         <nav>
-
-            <a href="#" class="logo">
-                <img src="../photo/bylogo.png">
-            </a>
-
-            <ul>
-                <li><a href="../Intro.html">Intro</a></li>
-                <li><a href="../acceuil/Acceuil.html">Acceuil</a></li>
-                <li><a href="../Présentation/Présentation.html">Présentation</a></li>
-                <li><a href="#">Compétence</a></li>
-                <li><a href="#">Expérience</a></li>
-            </ul>
-
-            <div class="bouton-dark" id="dark">
-                <span>Mode</span>
-                <img src="../photo/mode.png">
+            <div class="image-container">
+                <span class="logo" id="logo">
+                    <img src="../photo/bylogo.png" alt="Logo" id="logo-img">
+                </span>
             </div>
+            <div class="burger" id="burger"></div>
+            <ul id="menu" class="menu">
+                <li><a href="../index.html">Intro</a></li>
+                <li><a href="../acceuil/Acceuil.html">Acceuil</a></li>
+                <li><a href="../compétence/">Compétence</a></li>
+                <li><a href="#">Expérience</a></li>
+                <li class="bouton-dark" id="dark-theme-toggle">
+                    <span id="dark">Mini-jeux</span>
+                </li>
+            </ul>
+            <div class="close-btn" id="close-btn">X</div>
         </nav>
     </header>
-        
-        
-        
-        </nav>
-        <section class="bloque1">
 
-            <div class="presentation">
-                <div class="section1">
-                    <h2 class="title">
-                        <span class="title-word title-word-1">Rigoureux.</span>
-                        <br>
-                        <span class="title-word title-word-2">Dynamique</span>
-                        <span class="title-word title-word-3">et</span>
-                        <br>
-                        <span class="title-word title-word-4">Motivé.</span>
-                      </h2>
-    
-                    <p id="presentation-text"> j'aime le relationnel. Je sais
-                        <strong>travailler en équipe </strong><br>tout en sachant faire preuve d'initiative.
-                        <br>
-                        De formation technique et théorique informatique, 
-                        <br>
-                        je suis ouvert à toute
-                        <strong>proposition d'emploi </strong>dans le domaine 
-                        du <br>Developement ou dans tout autre
-                        domaine offrant <br><strong>formation qualifiante.</strong>
-                    </p>
+    <main>
+
+        <div class="presentation">
+            <section class="section">
+                <h2 class="title">
+                    <span class="title-word title-word-1">Rigoureux.</span>
+                    <br>
+                    <span class="title-word title-word-2">Dynamique</span>
+                    <span class="title-word title-word-3">et</span>
+                    <br>
+                    <span class="title-word title-word-4">Motivé.</span>
+                </h2>
+                <p>
+                    J'aime le relationnel. Je sais <strong>travailler en équipe</strong> tout en sachant faire preuve
+                    d'initiative.
+                    De formation technique et théorique informatique,
+                    je suis ouvert à toute <strong>proposition d'emploi</strong> dans le domaine
+                    du Développement ou dans tout autre domaine offrant <strong>formation qualifiante.</strong>
+                </p>
+
+                <div class="Jprix">
+                    <span class="justePrix">Juste Prix !</span>
                 </div>
-    
-            </div>
-    
-            <div class="chargement">
+            </section>
+        </div>
+    </main>
 
-                <span style="--i:1;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:2;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:3;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:4;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:5;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:6;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:7;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:8;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:9;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:10;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:11;"><i class="fa-solid fa-star"></i></span>
-                <span style="--i:12;"><i class="fa-solid fa-star"></i></span>
-            
-                </div>
-    
-    
-        </section>
+    <div class="jeu">
 
+        <div class="carte">
+            <p></p>
+            <button class="CLC">Recommencer</button>
+        </div>
 
+        <div class="W_L">
+            <p>Veuilliez <strong>choisir</strong> un numéro entre <strong>1 et 100</strong>,</p>
+            <p>vous avez <strong>7</strong> essais</p>
+            <p class="message"><strong>bonne chance</strong></p>
+            <p class="nbTent">il te reste <strong>7</strong> vie</p>
+        </div>
 
+        <div class="proposeur">
+            <input class="input" type="number" autofocus>
+            <button class="button">Proposer</button>
+        </div>
 
-    
+    </div>
+
 </body>
+
 </html>

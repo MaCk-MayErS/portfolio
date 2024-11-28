@@ -72,6 +72,7 @@ nav {
     top: 0px; 
     left: 0;
     z-index: 1; 
+    cursor: pointer;
 }
 #logo-img {
     width: 100%;
