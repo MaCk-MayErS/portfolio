@@ -12,12 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Taprom&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./presentation.css">
+    <link rel="stylesheet" href="./presentation.css?v=0.2">
     <link rel="icon" href="../photo/bylogo.png">
     <script src="../js/Minijeux.js" defer></script>
     <script src="../js/canvas.js" defer></script>
     <script src="../js/burger.js" defer></script>
     <script src="../js/JustePrix.js" defer></script>
+    <script src="../js/Dessinpaint.js" defer></script>
 </head>
 
 <body>
@@ -34,8 +35,8 @@
             <ul id="menu" class="menu">
                 <li><a href="../index.html">Intro</a></li>
                 <li><a href="../acceuil/Acceuil.html">Acceuil</a></li>
-                <li><a href="../compétence/">Compétence</a></li>
-                <li><a href="#">Expérience</a></li>
+                <li><a href="../compétence/competence.html">Compétence</a></li>
+                <li><a href="../expérience/expérience.html">Expérience</a></li>
                 <li class="bouton-dark" id="dark-theme-toggle">
                     <span id="dark">Mini-jeux</span>
                 </li>
@@ -63,10 +64,16 @@
                     je suis ouvert à toute <strong>proposition d'emploi</strong> dans le domaine
                     du Développement ou dans tout autre domaine offrant <strong>formation qualifiante.</strong>
                 </p>
+                <p></p>
 
                 <div class="Jprix">
                     <span class="justePrix">Juste Prix !</span>
                 </div>
+               <p></p>
+               <p></p>
+               <div class="aDessin">
+                <span class="appliDessin">Application de dessin</span>
+            </div>
             </section>
         </div>
     </main>
@@ -91,6 +98,30 @@
         </div>
 
     </div>
+
+    <div class="container">
+        <div class="pres">
+            <h1>Application de Dessin</h1>
+            <div class="color-picker">
+            <label for="color">Choisir une couleur :</label>
+            <input type="color" id="color" value="#000">
+            <button id="dessin" class="truc">Dessiner ✏️</button>
+            <button id="gomme" class="truc">Gomme 🧹</button>
+            <label for="number">Choisir la taille :</label>
+            <input type="number" id="number" class="dex" value="5">
+            <button id="annuler" class="backup">Annuler ◀️</button>
+            <button id="revenir" class="backup">Revenir ▶️</button>
+            <button id="clearButton" class="effacer">Tout Effacer</button>
+            <button id="save" class="jsp">Enregister</button>
+            <label for="upload" class="bidule">Upload</label>
+            <input type="file" accept="image/*" id="upload">
+        </div>
+    </div>
+        <div class="jilie">
+            <canvas id="drawingCanvas"></canvas>
+        </div>
+    </div>
+   
 
 </body>
 
