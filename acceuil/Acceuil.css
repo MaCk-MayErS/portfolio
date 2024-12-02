@@ -422,3 +422,48 @@ body:not(.dark-mode) .boite {
 }
 
 body:not(.dark-mode) #canvas{}
+
+
+@media (max-width: 920px) {
+
+    /* Réduire encore plus la taille de certains éléments */
+    .presentation {
+        padding: 10px;
+        margin-top: 60px;
+    }
+
+    .presentation span {
+        font-size: 0.7em;
+    }
+
+    .presentation p {
+        font-size: 0.4em;
+    }
+    .presentation a {
+        font-size: 0.9em;
+    }
+
+    /* Adapter le logo pour mobile */
+    #logo-img {
+        max-width: 120px;
+    }
+
+    /* Menu burger */
+    nav ul {
+        font-size: 0.9em;
+        display: none;  /* Par défaut caché */
+    }
+
+    .menu.open {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .burger {
+        display: block;
+    }
+    .close-btn{
+        top: 61px;
+    }
+}
