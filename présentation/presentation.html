@@ -19,17 +19,14 @@
     <script src="../js/burger.js" defer></script>
     <script src="../js/JustePrix.js" defer></script>
     <script src="../js/Dessinpaint.js" defer></script>
-    
 </head>
 
 <body>
 
     <canvas id="canvas"></canvas>
-
-
     <header>
-        <nav class="nav" id="nav">
-            <div class="image-container" id="image-container">
+        <nav>
+            <div class="image-container">
                 <span class="logo" id="logo">
                     <img src="../photo/bylogo.png" alt="Logo" id="logo-img">
                 </span>
@@ -38,6 +35,7 @@
             <ul id="menu" class="menu">
                 <li><a href="../index.html">Intro</a></li>
                 <li><a href="../acceuil/Acceuil.html">Acceuil</a></li>
+                <li><a href="../présentation/presentation.html">Présentation</a></li>
                 <li><a href="../compétence/competence.html">Compétence</a></li>
                 <li><a href="../expérience/expérience.html">Expérience</a></li>
                 <li class="bouton-dark" id="dark-theme-toggle">
@@ -45,27 +43,8 @@
                 </li>
             </ul>
             <div class="close-btn" id="close-btn">X</div>
-    </header>
-
-    <div id="secretMenu" style="display:none;">
-        <nav class="nav1" id="nav1">
-            <div class="image-container1" id="image-container1">
-                <span class="logo1" id="logo1">
-                    <img src="../photo/bylogo.png" alt="Logo1" id="logo-img1">
-                </span>
-            </div>
-            <div class="burger1" id="burger1"></div>
-            <ul id="menu1" class="menu1">
-                <li><a href="../js/JustePrix.js" id="jPrix">Juste Prix</a></li>
-                <li><a href="../js/Dessinpaint.js" class="aDessin">Dessin</a></li>
-                <li class="bouton-dark1" id="dark-theme-toggle1">
-                    <span id="dark1">Retour</span>
-                </li>
-            </ul>
-            <div class="close-btn1" id="close-btn1">X</div>
         </nav>
-    </div>
-    
+    </header>
 
     <main>
 
@@ -93,7 +72,7 @@
                 </div>
                <p></p>
                <p></p>
-               <div id="aDessin">
+               <div class="aDessin">
                 <span class="appliDessin">Application de dessin</span>
             </div>
             </section>
@@ -143,12 +122,6 @@
             <canvas id="drawingCanvas"></canvas>
         </div>
     </div>
-
-    <!-- <div class="dynamic-menu" id="dynamic-menu">
-        <ul>
-            <li><button id="back-button">Retour</button></li>
-        </ul>
-    </div> -->
    
 
 </body>
