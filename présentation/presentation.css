@@ -48,6 +48,10 @@ nav {
     display: flex;
     justify-content: space-between;
 }
+.nav1 {
+    display: flex;
+    justify-content: space-between;
+}
 
 .image-container {
     width: 100vw;
@@ -58,28 +62,82 @@ nav {
     align-items: center;
     position: absolute;
     top: 0px;
-    left: 0;
+    left: 0px;
+    
     z-index: -1;
 }
-
+.image-container1 {
+    width: 100vw;
+    height: 15vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+.image-container1 .open {
+    display: none;
+}
+#secretMenu {
+    background-color: var(--backgroud-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: none;
+    font-size: 1.5em;
+    width: 100vw;
+    height: 15vh;
+}
+#secretMenu.open {
+    display: flex;
+    justify-content: space-evenly;
+}
+.magic1, .magic2 {
+    color: #000;
+    font-weight: bold;
+}
 #logo-img {
     width: 100%;
     height: 90px;
     background-color: #000;
     z-index: 5;
 }
+#logo-img1 {
+    width: 100%;
+    height: 90px;
+    background-color: #000;
+    z-index: 6;
+}
 
 /* Liste du menu */
-nav ul {
+.nav ul {
+    list-style: none;
+    font-size: 1.5em;
+}
+.nav1 ul {
     list-style: none;
 }
 
-nav ul li {
+.nav ul li {
+    display: inline-flex;
+    margin: 5px 15px;
+}
+.nav1 ul li {
     display: inline-flex;
     margin: 5px 15px;
 }
 
-nav ul li a {
+.nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+.nav1 ul li a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
@@ -124,12 +182,30 @@ nav ul li a {
     border-radius: 20px;
     cursor: pointer;
 }
+.bouton-dark1#dark-theme-toggle1 {
+    background-color: #ff4848;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
 
-.bouton-dark a#dark {
+.bouton-dark span#dark {
+    color: #fff;
+}
+.bouton-dark1 span#dark1 {
     color: #fff;
 }
 
 .bouton-dark img {
+    width: 35px;
+    margin-left: 10px;
+}
+.bouton-dark1 img {
     width: 35px;
     margin-left: 10px;
 }
@@ -341,13 +417,34 @@ nav ul li a {
     border-radius: 10px;
     z-index: 5;
 }
+.menu1 {
+    display: none;
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--backgroud-color);
+    border-radius: 10px;
+    z-index: 6;
+}
 
 .menu.open {
     display: flex;
     justify-content: space-evenly;
 }
+.menu1.open {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .menu li {
+    list-style: none;
+    text-align: center;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+.menu1 li {
     list-style: none;
     text-align: center;
     width: fit-content;
@@ -362,9 +459,23 @@ nav ul li a {
     text-decoration: none;
     font-weight: 600;
 }
+.menu1 li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
 
 .logo.open:before {
     z-index: 5;
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+}
+.logo1.open:before {
+    z-index: 6;
     font-size: 50px;
     color: #fff;
     position: absolute;
@@ -384,8 +495,22 @@ nav ul li a {
     display: none;
     z-index: 5;
 }
+.close-btn1 {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    z-index: 5;
+}
 
 .menu.open + .close-btn {
+    display: block;
+    color: rgba(255, 72, 72);
+}
+.menu1.open + .close-btn1 {
     display: block;
     color: rgba(255, 72, 72);
 }
@@ -412,9 +537,6 @@ body:not(.dark-mode) .boite {
     display: none;
 }
 
-body:not(.dark-mode) #canvas{
-
-}
 
 .jeu,
 .carte,
@@ -457,7 +579,7 @@ body:not(.dark-mode) #canvas{
 /* le texte pour savoir si plus ou moins */
 .W_L p {
     font-size: 35px;
-    display:;
+    display:"";
 }
 
 /* la carte */

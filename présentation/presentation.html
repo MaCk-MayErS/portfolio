@@ -17,16 +17,21 @@
     <script src="../js/Minijeux.js" defer></script>
     <script src="../js/canvas.js" defer></script>
     <script src="../js/burger.js" defer></script>
+    <script src="../js/burger1.js" defer></script>
     <script src="../js/JustePrix.js" defer></script>
     <script src="../js/Dessinpaint.js" defer></script>
+    <script src="../js/burger2.js" defer></script>
+    
 </head>
 
 <body>
 
     <canvas id="canvas"></canvas>
+
+
     <header>
-        <nav>
-            <div class="image-container">
+        <nav class="nav" id="nav">
+            <div class="image-container" id="image-container">
                 <span class="logo" id="logo">
                     <img src="../photo/bylogo.png" alt="Logo" id="logo-img">
                 </span>
@@ -35,16 +40,38 @@
             <ul id="menu" class="menu">
                 <li><a href="../index.html">Intro</a></li>
                 <li><a href="../acceuil/Acceuil.html">Acceuil</a></li>
-                <li><a href="../présentation/presentation.html">Présentation</a></li>
                 <li><a href="../compétence/competence.html">Compétence</a></li>
                 <li><a href="../expérience/expérience.html">Expérience</a></li>
                 <li class="bouton-dark" id="dark-theme-toggle">
                     <span id="dark">Mini-jeux</span>
                 </li>
             </ul>
+            </nav>
             <div class="close-btn" id="close-btn">X</div>
-        </nav>
     </header>
+
+
+
+    <section class="secretMenu" id="secretMenu">
+    <nav class="nav1" id="nav1">
+        <div class="image-container1" id="image-container1">
+            <span class="logo1" id="logo1">
+                <img src="../photo/bylogo.png" alt="Logo1" id="logo-img1">
+            </span>
+        </div>
+        <div class="burger1" id="burger1"></div>
+        <ul id="menu1" class="menu1">
+            <li><span class="magic1">Juste Prix</span></li>
+            <li><span class="magic2">Appli Dessin</span></li>
+            <li class="bouton-dark1" id="dark-theme-toggle1">
+                <span class="dark1" id="dark1">Retour</span>
+            </li>
+        </ul>
+        
+    </nav>
+</section>
+
+    
 
     <main>
 
@@ -67,12 +94,12 @@
                 </p>
                 <p></p>
 
-                <div class="Jprix">
+                <div class="Jprix" id="jPrix">
                     <span class="justePrix">Juste Prix !</span>
                 </div>
                <p></p>
                <p></p>
-               <div class="aDessin">
+               <div class="aDessin" id="aDessin">
                 <span class="appliDessin">Application de dessin</span>
             </div>
             </section>
@@ -122,6 +149,12 @@
             <canvas id="drawingCanvas"></canvas>
         </div>
     </div>
+
+    <!-- <div class="dynamic-menu" id="dynamic-menu">
+        <ul>
+            <li><button id="back-button">Retour</button></li>
+        </ul>
+    </div> -->
    
 
 </body>

@@ -72,6 +72,7 @@ nav {
 /* Liste du menu */
 nav ul {
     list-style: none;
+    font-size: 1.5em;
 }
 
 nav ul li {
