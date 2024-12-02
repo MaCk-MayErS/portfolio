@@ -78,16 +78,16 @@ const toggleTextContent = () => {
         presentationText[1].innerHTML = `
             2021 - 2022
                     <br>
-                    technicien d'assistance en informatique et sécurité • eps`;
+                    technicien support et sécurité en informatique  • eps`;
         presentationText[2].innerHTML = `
            2021
                     <br>
-                    personnel service d'accueil et gardiennage sécurité • proman 128
+                    Technicien support en informatique • proman 128
                `;
         presentationText[3].innerHTML = `
          2019 - 2020
                     <br>
-                    Technicien Helpdesk • Interway`;             
+                    Technicien support et résseau en informatique • Interway`;             
     }
 };
 
