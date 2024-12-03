@@ -479,7 +479,7 @@ body:not(.dark-mode) #canvas{}
   
 
 .endNav {
-    animation: upcredits 10s linear infinite;
+    animation: upcredits 15s linear;
     max-width: 100vw;
     max-height: 100vh;
     letter-spacing: 10px;
@@ -514,3 +514,151 @@ body:not(.dark-mode) #canvas{}
         opacity: 0;
     }
 }
+
+.neesha{
+    background:#000;
+      width:100vw;
+      height:100vh;
+      position:relative;
+      display:none;
+      grid-template-columns:.7fr 1fr
+     }
+    
+    
+    .ava{ background:url(../photo/ninja.png) no-repeat 25% 40%;
+      width:100%;
+      height:100vh;
+      background-size: 1000px;
+    transition:all 1s linear
+    }
+    
+    .block{
+      position:relative;
+      }
+    
+    .block:before{
+      position:absolute;
+      content:'';
+      background:black;
+      clip-path:polygon(100% 0, 100% 100%, 0 100%);
+     width:250px;
+      height:100vh;
+      left:-250px;
+       transition:all 1s linear
+     }
+    
+    .text{
+     color: rgba(250,250,250,.1);
+     opacity:0;
+      mask-image:linear-gradient(#fff,transparent);
+      transition:all 1s linear;
+      padding:2rem 2rem 400px;
+      text-align:justify;
+      animation: scroll-reveal linear forwards;
+      height:100vh;
+      position: absolute;
+      top: 8px;
+      margin:auto;
+      overflow-y:auto;
+      animation-timeline: view(x);
+      animation-range-start: contain 0px;
+      animation-range-end: contain 00px;
+      }
+    
+    .text:-webkit-scrollbar{
+      width:2px
+    }
+    
+    .text:-webkit-scrollbar-track{
+      background:transparent
+    }
+    
+    .text:-webkit-scrollbar-thumb{
+     background:#eee
+    }
+    
+    @keyframes  scroll-reveal {
+      to {
+        color:rgba(250,250,250,1);
+      }
+    }
+    
+    .indent{
+      text-indent:6rem
+    }
+    
+    .show{
+      opacity:1;
+      transition:all 1s linear;
+      position:absolute;
+      top:50%;
+      left:-134px;
+      color:#f2f2f2;
+      padding:1rem;
+      font-size:2rem;
+      font-family:Arial;
+    }
+    
+    .show hr{
+      border-color:#722dcb;
+      width:50%;
+      margin-right:0
+    }
+    
+    p.small{
+      text-align:right;
+      font-size:1rem
+    }
+    
+    .neesha:hover .ava{
+     background-position:50% 10%;
+     background-size: 800px;
+     opacity:1;
+      transition:all 1s linear
+    }
+    .neesha:hover:before .ava{
+        width:100%;
+        background-position:50% 10%;
+      height:100vh;
+      background-size: 1000px;
+    transition:all 1s linear
+       }
+    
+    .neesha:hover .text {
+       opacity:1;
+       position: absolute;
+       top: 110px;
+
+      transition:all 1s linear
+    }
+    
+    .neesha:hover .show{
+      opacity:0;
+      transition:all 1s linear
+    }
+    
+    .neesha:hover .block:before{
+      width:0;
+      left:0;
+       transition:all 1s linear
+    }
+    
+    center{
+      border:1px solid #fff;
+      border-radius:2rem
+    }
+
+    .appliNinja{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .appliNinja{
+        background: #ff4848;
+        color: #fff;
+        padding: 15px 40px;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-top: 35px;
+        text-decoration: none;
+    }
