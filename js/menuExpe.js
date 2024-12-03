@@ -7,6 +7,8 @@ const darkButton = document.getElementById('dark-theme-toggle');
 const imageCont = document.querySelector(".image-container");
 const BgLogo = document.getElementById('logo-img');
 const imageConst = imageCont; 
+const EndT = document.querySelector(".endNav")
+const body = document.querySelector(".body")
 
 boutonDark.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
@@ -32,7 +34,10 @@ const updateTextStyle = () => {
       
         BgLogo.style.backgroundColor = "#e5e5e5"
         imageCont.style.backgroundColor = '#e5e5e5';
-        presentationTitle.style.color = '#fff';     
+        presentationTitle.style.color = '#fff'; 
+        EndT.style.display = "block"
+        body.style.overflow = "hidden" 
+           
     } 
     else {
         presentation.style.textAlign = 'center';
@@ -43,24 +48,21 @@ const updateTextStyle = () => {
         presentationTitle.style.color = '#000';
         imageCont.style.backgroundColor = 'transparent';
         BgLogo.style.backgroundColor = "#000"
+        EndT.style.display = "none" 
+        body.style.overflow = "none"
+        
     }
 }
 
 const toggleTextContent = () => {
     if (document.body.classList.contains('dark-mode')) {
         presentationTitle.innerHTML = `
-            <span class="title-word title-word-1">En,</span>
-            <span class="title-word title-word-2">cour</span>
-            <span class="title-word title-word-3">de</span>
-            <br>
-            <span class="title-word title-word-4">création !</span>
-        `;
+            `;
         presentationText[0].innerHTML = `
-            "Notre site est actuellement en maintenance pour améliorer nos services`;
+            `;
         presentationText[1].innerHTML = `
-            Nous faisons tout notre possible pour que cet espace soit de nouveau disponible très prochainement.
-        `;
-        presentationText[2].innerHTML = `Merci de votre patience et à bientôt !`;
+            `;
+        presentationText[2].innerHTML = ``;
         presentationText[3].innerHTML = ``;
     } 
     else {

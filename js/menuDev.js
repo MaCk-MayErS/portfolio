@@ -7,6 +7,7 @@ const darkButton = document.getElementById('dark-theme-toggle');
 const imageCont = document.querySelector(".image-container");
 const BgLogo = document.getElementById('logo-img');
 const imageConst = imageCont; 
+const LogoSli = document.querySelector(".logo-slider")
 
 boutonDark.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
@@ -32,7 +33,9 @@ const updateTextStyle = () => {
         BgLogo.style.backgroundColor = "#e5e5e5"
         imageCont.style.backgroundColor = '#e5e5e5';
         presentationTitle.style.color = '#fff';
-        boutonDark.textContent = "Compétence général"     
+        boutonDark.textContent = "Compétence général" 
+        LogoSli.style.display = "flex"
+
     } 
     else {
         presentation.style.textAlign = 'center';
@@ -44,24 +47,27 @@ const updateTextStyle = () => {
         imageCont.style.backgroundColor = 'transparent';
         BgLogo.style.backgroundColor = "#000"
         boutonDark.textContent = "Compétence en développement"
+        LogoSli.style.display = "none"
     }
 }
 
 const toggleTextContent = () => {
     if (document.body.classList.contains('dark-mode')) {
         presentationTitle.innerHTML = `
-            <span class="title-word title-word-1">En,</span>
-            <span class="title-word title-word-2">cour</span>
-            <span class="title-word title-word-3">de</span>
-            <br>
-            <span class="title-word title-word-4">création !</span>
+            <span class="title-word title-word-1">Voici</span>
+                    <span class="title-word title-word-2">mes</span>
+                    <br>
+                    <span class="title-word title-word-3">compétences</span>
+                    <span class="title-word title-word-4">général</span>
+                    <br>
+                    <span class="title-word title-word-5">en Développement</span>
         `;
         presentationText[0].innerHTML = `
-            "Notre site est actuellement en maintenance pour améliorer nos services`;
+            Durant l'année 2024/2025, j'ai étudié les langages suivants : HTML, CSS, JavaScript, PHP, requêtes SQL...`;
         presentationText[1].innerHTML = `
-            Nous faisons tout notre possible pour que cet espace soit de nouveau disponible très prochainement.
+            Je possède donc une base dans ces langages.
         `;
-        presentationText[2].innerHTML = `Merci de votre patience et à bientôt !`;
+        presentationText[2].innerHTML = ``;
         presentationText[3].innerHTML = ``;
     } 
     else {
@@ -70,9 +76,9 @@ const toggleTextContent = () => {
                     <span class="title-word title-word-2">mes</span>
                     <br>
                     <span class="title-word title-word-3">compétences</span>
-                    <span class="title-word title-word-4">génral</span>
+                    <span class="title-word title-word-4">général</span>
                     <br>
-                    <span class="title-word title-word-4">en informatique</span>
+                    <span class="title-word title-word-5">en informatique</span>
         `;
         presentationText[0].innerHTML = `
            Modèle <strong>OSI, TCP/IP</strong>, adressage <strong>Ipv4 / Ipv6</strong>

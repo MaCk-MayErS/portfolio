@@ -28,6 +28,7 @@
 
 /* Corps de la page */
 body {
+    overflow: hidden;
     background-color: var(--backgroud-color);
     color: var(--text-color);
 }
@@ -87,14 +88,16 @@ nav ul li a {
 }
 
 /* Bouton pour le mode sombre */
-.bouton-dark#dark-theme-toggle {
+#dark-theme-toggle {
     background-color: #ff4848;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 40px;
+    padding: 10px 0px;
+    
+    width: 170px;
+    height: 45px;
     border-radius: 20px;
     cursor: pointer;
 }
@@ -200,22 +203,28 @@ nav ul li a {
 }
 
 /* Section de présentation */
+
 .presentation {
     display: flex;
     justify-content: center;
+    align-items: center; /* Ajout pour le centrage vertical */
     flex-direction: column;
     padding: 25px 150px;
-    margin-top: 150px;
+    margin-top: 100px;
     z-index: 2;
+    text-align: center;  /* Assurez-vous que le texte est centré */
 }
 
 .section {
     position: relative;
     justify-content: end;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     padding-top: 30px;
     z-index: 1;
+    
 }
 
 /* Canvas en arrière-plan */
@@ -464,5 +473,44 @@ body:not(.dark-mode) #canvas{}
     }
     .close-btn{
         top: 61px;
+    }
+}
+
+  
+
+.endNav {
+    animation: upcredits 10s linear infinite;
+    max-width: 100vw;
+    max-height: 100vh;
+    letter-spacing: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+    display: inline-block;
+}
+
+.endNav > div + div {
+    margin-top: 1.6rem;
+    margin-top: 50px;
+}
+
+.endNav strong {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+/* Animation pour faire défiler le texte */
+@keyframes upcredits {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-55vh);
+        opacity: 0;
     }
 }

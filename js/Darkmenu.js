@@ -24,27 +24,36 @@ const updateCanvasVisibility = () => {
 };
 
 const updateTextStyle = () => {
+    // Détection de la largeur de l'écran
+    const isMobile = window.innerWidth <= 920;
+    
     if (document.body.classList.contains('dark-mode')) {
-        presentation.style.textAlign = 'center';               
-        presentationTitle.style.fontSize = '70px'; 
-        presentationText.forEach(p => p.style.fontSize = '25px');  
-        presentationText.forEach(p => p.style.marginTop = '20px');
-        section.style.marginLeft = "300px";
-        BgLogo.style.backgroundColor = "#e5e5e5"
-        imageCont.style.backgroundColor = '#e5e5e5';
-        presentationTitle.style.color = '#fff';     
-    } 
-    else {
+        // Dark mode
         presentation.style.textAlign = 'center';
-        presentationTitle.style.fontSize = '70px';  
-        presentationText.forEach(p => p.style.fontSize = '25px');  
-        presentationText.forEach(p => p.style.marginTop = '20px');
-        section.style.marginLeft = "";
+        presentationTitle.style.fontSize = isMobile ? '40px' : '70px'; // Change la taille du texte en fonction de la taille de l'écran
+        section.style.marginLeft = isMobile ? "0" : "300px";  // Si mobile, réinitialiser la marge à gauche
+        BgLogo.style.backgroundColor = "#e5e5e5";
+        imageCont.style.backgroundColor = '#e5e5e5';
+        presentationTitle.style.color = '#fff';  
+        presentation.style.top = isMobile ? "60px" : "0px"; 
+    } else {
+        // Mode par défaut
+        presentation.style.textAlign = 'center';
+        presentationTitle.style.fontSize = isMobile ? '40px' : '70px'; // Change la taille du texte en fonction de la taille de l'écran
+        section.style.marginLeft = isMobile ? "0" : "";  // Réinitialise la marge à gauche en mobile
         presentationTitle.style.color = '#000';
         imageCont.style.backgroundColor = 'transparent';
-        BgLogo.style.backgroundColor = "#000"
+        BgLogo.style.backgroundColor = "#000";
+        presentation.style.top = isMobile ? "60px" : "0px"; 
     }
 }
+
+
+// Ajouter un écouteur d'événement pour réajuster les styles si la taille de la fenêtre change
+window.addEventListener('resize', updateTextStyle);
+
+
+
 
 const toggleTextContent = () => {
     if (document.body.classList.contains('dark-mode')) {
@@ -100,3 +109,4 @@ window.addEventListener('scroll', () => {
 
 updateCanvasVisibility();
 updateTextStyle();
+
