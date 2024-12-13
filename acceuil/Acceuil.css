@@ -1,10 +1,10 @@
+/* ===== RESET & VARIABLES ===== */
 .fredericka-the-great-regular {
     font-family: "Fredericka the Great", serif;
     font-weight: 400;
     font-style: normal;
 }
 
-/* Styles globaux */
 * {
     margin: 0;
     padding: 0;
@@ -12,27 +12,35 @@
     box-sizing: border-box;
 }
 
-/* Variables de couleurs */
 :root {
     --backgroud-color: #000000;
     --text-color: #999;
     --title-color: #fff;
 }
 
-.dark-mode {
-    /* Light-mode */
-    --backgroud-color: #e5e5e5;
-    --text-color: #000;
-    --title-color: #000;
-}
 
-/* Corps de la page */
+
+/* ===== BODY STYLES ===== */
 body {
     background-color: var(--backgroud-color);
     color: var(--text-color);
 }
 
-/* Header */
+
+
+/* ===== CANVAS ===== */
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+}
+
+
+
+/* ===== HEADER & NAVIGATION ===== */
 header {
     padding: 10px 30px;
     background-color: var(--backgroud-color);
@@ -43,12 +51,14 @@ header {
     z-index: 3;
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
 }
 
+
+
+/* ===== LOGO SECTION ===== */
 .image-container {
     width: 100vw;
     height: 15vh;
@@ -69,7 +79,36 @@ nav {
     z-index: 5;
 }
 
-/* Liste du menu */
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.logo.open img {
+    display: none;
+    z-index: 5;
+}
+
+
+
+/* ===== BURGER BUTTON ===== */
+.burger {
+    display: none;
+}
+
+
+
+/* ===== NAVIGATION MENU ===== */
 nav ul {
     list-style: none;
     font-size: 1.5em;
@@ -86,7 +125,32 @@ nav ul li a {
     font-weight: 600;
 }
 
-/* Bouton pour le mode sombre */
+.menu {
+    display: none;
+    width: 100%;
+    background-color: var(--backgroud-color);
+    border-radius: 10px;
+    z-index: 5;
+}
+
+.menu.open {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu li {
+    list-style: none;
+    text-align: center;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+
+
+/* ===== DARK MODE BUTTON ===== */
 .bouton-dark#dark-theme-toggle {
     background-color: #ff4848;
     color: #fff;
@@ -108,6 +172,28 @@ nav ul li a {
     margin-left: 10px;
 }
 
+
+
+/* ===== CLOSE BUTTON ===== */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    z-index: 5;
+}
+
+.menu.open + .close-btn {
+    display: block;
+    color: rgba(255, 72, 72);
+}
+
+
+
+/* ===== MAIN CONTENT ===== */
 /* Boîte avec animation des cercles */
 .boite {
     position: absolute;
@@ -131,16 +217,6 @@ nav ul li a {
     scale: 0.95;
 }
 
-@keyframes animCercle {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .cercle > .cercle {
     position: absolute;
     left: 35px;
@@ -159,53 +235,15 @@ nav ul li a {
     background: rgb(calc(25 * var(--nume)), 73, 73);
 }
 
-.a1 {
-    --nume: 1;
-}
 
-.a2 {
-    --nume: 2;
-}
 
-.a3 {
-    --nume: 3;
-}
-
-.a4 {
-    --nume: 4;
-}
-
-.a5 {
-    --nume: 5;
-}
-
-.a6 {
-    --nume: 6;
-}
-
-.a7 {
-    --nume: 7;
-}
-
-.a8 {
-    --nume: 8;
-}
-
-.a9 {
-    --nume: 9;
-}
-
-.a10 {
-    --nume: 10;
-}
-
-/* Section de présentation */
+/* ===== PRESENTATION SECTION ===== */
 .presentation {
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 25px 150px;
-    margin-top: 150px;
+    margin-top: 50px;
     z-index: 2;
 }
 
@@ -218,25 +256,15 @@ nav ul li a {
     z-index: 1;
 }
 
-/* Canvas en arrière-plan */
-#canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 3;
-}
-
-/* Titres et textes de la présentation */
 .presentation h2 {
     font-size: 70px;
     color: var(--title-color);
     font-weight: 600;
 }
 
-.presentation .p {
-    font-size: 20px;
+.presentation p {
+    font-size: 25px;
+    margin-top: 25px;
 }
 
 .presentation a {
@@ -247,22 +275,38 @@ nav ul li a {
     cursor: pointer;
     margin-top: 35px;
     text-decoration: none;
-    display: none;
     display: inline-block;
 }
-#section{
-    margin-left: px;
-}
 
-.presentation p {
-    font-size: 25px;
-    margin-top: 25px;
+
+
+/* ===== ANIMATIONS ===== */
+@keyframes animCercle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .title-word {
     animation: color-animation 4s linear infinite;
 }
 
+@keyframes color-animation {
+    0% { color: var(--color-1); }
+    32% { color: var(--color-1); }
+    33% { color: var(--color-2); }
+    65% { color: var(--color-2); }
+    66% { color: var(--color-3); }
+    99% { color: var(--color-3); }
+    100% { color: var(--color-1); }
+}
+
+
+
+/* ===== TITLE WORD COLORS ===== */
 .title-word-1 {
     --color-1: #DF8453;
     --color-2: #3D8DAE;
@@ -287,131 +331,19 @@ nav ul li a {
     --color-3: #3D8DAE;
 }
 
-@keyframes color-animation {
-    0% {
-        color: var(--color-1);
-    }
 
-    32% {
-        color: var(--color-1);
-    }
 
-    33% {
-        color: var(--color-2);
-    }
-
-    65% {
-        color: var(--color-2);
-    }
-
-    66% {
-        color: var(--color-3);
-    }
-
-    99% {
-        color: var(--color-3);
-    }
-
-    100% {
-        color: var(--color-1);
-    }
-}
-
-/* Style du logo en mode menu */
-.logo img {
-    display: block;
-    width: 100%;
-    height: auto;
-    z-index: 5;
-}
-
-/* Style de base du logo */
-.logo img {
-    width: 40px;
-    transition: opacity 0.3s ease;
-    z-index: 5;
-}
-
-.logo {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-}
-
-.logo.open img {
-    display: none;
-    z-index: 5;
-}
-
-/* Menu caché */
-.menu {
-    display: none;
-    width: 100%;
-    background-color: var(--backgroud-color);
-    border-radius: 10px;
-    z-index: 5;
-}
-
-.menu.open {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.menu li {
-    list-style: none;
-    text-align: center;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-}
-
-.menu li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.logo.open:before {
-    z-index: 5;
-    font-size: 50px;
-    color: #fff;
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    cursor: pointer;
-}
-
-/* Fermeture du menu */
-.close-btn {
-    position: absolute;
-    top: 12px;
-    right: 10px;
-    font-size: 40px;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    z-index: 5;
-}
-
-.menu.open + .close-btn {
-    display: block;
-    color: rgba(255, 72, 72);
-}
-
-/* Liens pour contacter ou télécharger CV */
-#contact-links {
-    display: inline-block;
+/* ===== DARK MODE STYLES ===== */
+.dark-mode {
+    --backgroud-color: #e5e5e5;
+    --text-color: #000;
+    --title-color: #000;
 }
 
 body.dark-mode #contact-links {
     display: none;
 }
 
-/* Visibilité en fonction du mode sombre */
 .dark-mode .boite {
     display: block;
 }
@@ -424,63 +356,93 @@ body:not(.dark-mode) .boite {
     display: none;
 }
 
-body:not(.dark-mode) #canvas{}
 
 
+/* ===== MEDIA QUERIES ===== */
 @media (max-width: 920px) {
-
-    /* Réduire encore plus la taille de certains éléments */
     .presentation {
         padding: 10px;
-        margin-top: 60px;
+        margin-top: 100px;
         position: absolute;
         display: flex;
         justify-content: center;
         text-align: center;
     }
-    .image-container{
-    }
 
     .presentation span {
-        font-size: 0.6em;
+        font-size: 1.2em;
     }
 
     .presentation p {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
+
     .presentation a {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
-    
 
-    /* Adapter le logo pour mobile */
     #logo-img {
-        max-width: 80px;
-        max-height: 70px;
-        margin-bottom: -205px;
+        max-width: 90px;
+        max-height: 120px;
+        margin-top: 50px;
     }
 
-
-    /* Menu burger */
     nav ul {
         font-size: 1.3em;
         display: none;
-         /* Par défaut caché */
+        
     }
 
     .menu.open {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
     }
 
-    .burger {
-        display: block;
+    .menu li {
+        margin: -7px;
+        width: 100%;
     }
-    .close-btn{
-        top: 0.8em;
+
+    .close-btn {
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
     }
+
     #boite1 {
         display: none;
+    }
+
+    /* Style du bouton dark mode en mobile */
+    .bouton-dark#dark-theme-toggle {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;  /* Garde la largeur originale */
+        height: 40px;  /* Garde la hauteur originale */
+    }
+
+    .bouton-dark a#dark {
+        text-align: center;
+        font-size: 0.9em;
+        margin-right: 10px;
+    }
+
+    .bouton-dark img {
+        width: 35px;  /* Garde la taille originale de l'image */
+        margin-left: 0;
+    }
+
+    /* Ajustement du conteneur li pour le bouton dark */
+    .menu li.bouton-dark {
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+        padding: 5px 0;
     }
 }
